@@ -17,6 +17,7 @@ public class VendingUI {
 
     public void use() {
 
+        outer:
         while(true){
             System.out.println("1.아아 2.티 3.밀크커피 4.종료");
             String oper = this.scanner.nextLine();
@@ -33,11 +34,8 @@ public class VendingUI {
                     break;
                 case "4":
                     System.out.println("프로그램 종료 합니다.");
-                    break;
+                    break outer;
             }//end switch
         }
-
-
     }
-
 }
