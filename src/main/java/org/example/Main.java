@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.card.Card;
+import org.example.card.CardDeck;
 import org.example.lots.LotsUI;
 import org.example.util.ScanUtil;
 import org.example.vending.VM2;
@@ -14,9 +16,15 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
 
-        LotsUI ui = new LotsUI();
+        Card userCard = CardDeck.INSTANCE.getOne();
+        Card comCard = CardDeck.INSTANCE.getOne();
 
-        ui.startGame();
+        System.out.println(userCard);
+        System.out.println(comCard);
+
+//        LotsUI ui = new LotsUI();
+//
+//        ui.startGame();
 
 //        ArrayList<String> list = new ArrayList<>();
 //        list.add("꽝");
