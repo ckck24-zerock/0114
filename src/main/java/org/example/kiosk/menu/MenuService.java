@@ -18,7 +18,9 @@ public enum MenuService {
     }
 
 
-    //public ArrayList<Menu> getList(){ }
+    public ArrayList<Menu> getList(){
+        return menus;
+    }
 
 
 }
