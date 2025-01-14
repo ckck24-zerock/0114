@@ -1,19 +1,21 @@
 package org.example.vending;
 
-public class VendingMachine {
+public enum VendingMachine {
+
+    INSTANCE;
 
     private int iaCount;
     private int teaCount;
     private int milkCount;
 
-    public VendingMachine(){
+    private VendingMachine(){
         //this.iaCount = 10;
         //this.teaCount = 5;
         //this.milkCount = 7;
         this(10,5,7); //생성자 함수 호출
     }
 
-    public VendingMachine(int iaCount, int teaCount, int milkCount) {
+    private VendingMachine(int iaCount, int teaCount, int milkCount) {
         this.iaCount = iaCount;
         this.teaCount = teaCount;
         this.milkCount = milkCount;

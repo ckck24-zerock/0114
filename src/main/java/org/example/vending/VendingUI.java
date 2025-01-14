@@ -6,12 +6,9 @@ public class VendingUI {
 
     //메서드들간 공유할만한
     private Scanner scanner;
-    //협력자/조력자
-    private VendingMachine vendingMachine;
 
     public VendingUI(){
         this.scanner = new Scanner(System.in);
-        this.vendingMachine = new VendingMachine();
     }
 
 
@@ -24,13 +21,13 @@ public class VendingUI {
 
             switch (oper){
                 case "1":
-                    System.out.println(vendingMachine.makeIA());
+                    System.out.println(VendingMachine.INSTANCE.makeIA());
                     break;
                 case "2":
-                    System.out.println(vendingMachine.makeTea());
+                    System.out.println(VendingMachine.INSTANCE.makeTea());
                     break;
                 case "3":
-                    System.out.println(vendingMachine.makeMilkCoffee());
+                    System.out.println(VendingMachine.INSTANCE.makeMilkCoffee());
                     break;
                 case "4":
                     System.out.println("프로그램 종료 합니다.");
