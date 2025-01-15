@@ -11,11 +11,19 @@ import java.util.Scanner;
 
 public class KioskUI {
 
-    public void greeting(){
+    public void startOrder() {
+        while(true){
+            this.greeting();
+            this.makeOrder();
+            this.thanks();
+        }
+    }
+
+    private void greeting(){
         System.out.println("안녕하세요!");
     }
 
-    public void makeOrder() {
+    private void makeOrder() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -54,7 +62,7 @@ public class KioskUI {
 
     }
 
-    public void thanks() {
+    private void thanks() {
         System.out.println("안녕히가세요 행복하세요");
     }
 
