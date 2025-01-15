@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.card.Card;
 import org.example.card.CardDeck;
+import org.example.kiosk.KioskUI;
 import org.example.lots.LotsUI;
 import org.example.util.ScanUtil;
 import org.example.vending.Scores;
@@ -17,10 +18,11 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
 
-        Scores scores = Scores.builder()
-                .kor(55)
-                .soc(44)
-                .build();
+        KioskUI ui = new KioskUI();
+        ui.greeting();
+        ui.makeOrder();
+        ui.thanks();
+
 
 //        Card userCard = CardDeck.INSTANCE.getOne();
 //        Card comCard = CardDeck.INSTANCE.getOne();
