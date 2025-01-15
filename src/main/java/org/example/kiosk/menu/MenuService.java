@@ -18,16 +18,14 @@ public enum MenuService {
         menus.add(new Menu(2, "Latte", 3500));
         menus.add(new Menu(3, "Cappuccino", 4000));
         menus.add(new Menu(4, "Espresso", 2500));
+
     }
 
 
     public ArrayList<Menu> getList(){
 
-        log.debug("debug..............");
-        log.info("info.............");
-        log.warn("warn..............");
-        log.error("error............");
-        log.fatal("fatal.............");
+        log.info("getList...called" );
+        log.info(menus);
 
         return menus;
     }
